@@ -12,7 +12,6 @@ function Home() {
                 <Link to={"/list"}>View Current Employees</Link>
                 <h2>Create Employee</h2>
                 <EmployeeForm/>
-                <button>Save</button>
             </div>
             <div id="confirmation" className="modal">Employee Created!</div>
         </div>
