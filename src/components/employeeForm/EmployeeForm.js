@@ -4,9 +4,10 @@ import { states, department } from "../../services/api"
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { saveEmployee } from "../../app/store";
+import "./employeeForm.css"
 
 function EmployeeForm() {
-    // const [isSent, setIsSent] = useState(false);
+    const [isSent, setIsSent] = useState(false);
     const [employeeForm, setEmployeeForm] = useState({
         firstName: "",
         lastName: "",
@@ -23,12 +24,12 @@ function EmployeeForm() {
     function saveEmployees() {
         dispatch(saveEmployee(employeeForm));
         console.log(employeeForm);
-        // setIsSent(true);
+        setIsSent(true);
     }
 
-    // function closeModal() {
-    //     setIsSent(false);
-    // }
+    function closeModal() {
+        setIsSent(false);
+    }
 
     return (
         <div>
@@ -90,7 +91,7 @@ function EmployeeForm() {
                     street: street.currentTarget.value,
                     });
                 }}
-                className="address--element"
+                className="address-element"
                 id="street"
                 name="Street"
                 type="text"
@@ -102,12 +103,12 @@ function EmployeeForm() {
                     city: city.currentTarget.value,
                     });
                 }}
-                className="address--element"
+                className="address-element"
                 id="city"
                 name="City"
                 type="text"
                 ></Input>
-                <div className="address--element">
+                <div className="address-element">
                 <label htmlFor="state">State</label>
                 <Dropdown
                     options={states}
@@ -127,7 +128,7 @@ function EmployeeForm() {
                     zipCode: zipCode.currentTarget.value,
                     });
                 }}
-                className="address--element"
+                className="address-element"
                 id="zip-code"
                 name="Zip Code"
                 type="number"
@@ -146,8 +147,17 @@ function EmployeeForm() {
                 }}
             ></Dropdown>
             </form>
-
             <button onClick={saveEmployees}>Save</button>
+            {isSent ? (
+                <div className="blocker">
+                    <div id="confirmation" className="modal">
+                        Employee Created!
+                        <p className="close" onClick={closeModal}>
+                        x
+                        </p>
+                    </div>
+                </div>
+            ) : null}
         </div>
     )
 }

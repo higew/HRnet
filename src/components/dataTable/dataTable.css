@@ -1,0 +1,42 @@
+table {
+    margin-top: 15px;
+    width: 100%;
+}
+
+table tr {
+    border: 2px solid black;
+    margin: 10px;
+    color: black;
+}
+
+table .odd {
+    background-color: #e1e1e1;
+    color: black;
+}
+
+table .even {
+    background-color: #f7f7f7;
+    color: black;
+}
+
+table th {
+    padding: 8px;
+    border-bottom: 1px solid #dcdcdc;
+    font-weight: bold;
+    text-align: left;
+}
+table .default {
+    background-image: url("../../assets/default.png");
+}
+table .up {
+    background-image: url("../../assets/up_arrow.png");
+}
+table .down {
+    background-image: url("../../assets/down_arrow.png");
+}
+
+table .up, table .default, table .down {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+}

@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .employee-table {
+    margin: 20px;
+    padding: 20px;
+    width: 70%;
+}
+
+.wrapper .employee-table-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper .employee-table-body {
+    width: 100%;
+}
+
+.wrapper .employee-table-footer {
+    border-top: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .employee-table-footer .navigationButtons {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .employee-table-footer .navigationButtons a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.wrapper .employee-table-footer .navigationButtons a:hover {
+    color: white;
+    background-color: black;
+}
+
+.wrapper .employee-table-footer .navigationActive a {
+    color: white;
+    background-color: black;
+}
+
+.wrapper .employee-table-footer .navigationDisabled a {
+    color: white;
+    background-color: grey;
+}

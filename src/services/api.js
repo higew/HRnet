@@ -244,3 +244,15 @@ export const department = [
     { name: "Human Resources", key: "hr" },
     { name: "Legal", key: "leg" },
 ];
+
+export const columns = [
+    { title: "First Name", accessor: "firstName", sortable: true },
+    { title: "Last Name", accessor: "lastName", sortable: true },
+    { title: "Start Date", accessor: "startDate", sortable: true },
+    { title: "Department", accessor: "department", sortable: true },
+    { title: "Date of Birth", accessor: "dateOfBirth", sortable: true },
+    { title: "Street", accessor: "street", sortable: true },
+    { title: "City", accessor: "city", sortable: true },
+    { title: "State", accessor: "state", sortable: true },
+    { title: "Zip Code", accessor: "zipCode", sortable: true },
+];
