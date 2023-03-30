@@ -67,6 +67,7 @@ function EmployeeForm() {
                 id="date-of-birth"
                 name="Date of Birth"
                 type="date"
+                className="date"
                 ></Input>
                 <Input
                 onChange={(startDate) => {
@@ -78,6 +79,7 @@ function EmployeeForm() {
                 id="start-date"
                 name="Start Date"
                 type="date"
+                className="date"
                 ></Input>
             </div>
 
