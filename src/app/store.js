@@ -1,10 +1,11 @@
 import { createStore } from "redux";
 import { produce } from "immer";
+import { datas } from "../services/api";
 
 const reduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
 const initialState = {
-    employeeList: [],
+    employeeList: datas,
 };
 
 export const saveEmployee = (employee) => ({
